@@ -16,14 +16,13 @@ import streamlit as st
 
 import requests
 r = requests.get('https://us-central1-dadsofunny.cloudfunctions.net/DadJokes/random/jokes')
-print('new')
 
 # In[10]:
 
-
-st.write(f'''{r.json()['setup']}
-{r.json()['punchline']}
-''')
+if st.button('Joke?'):
+    st.write(f'''{r.json()['setup']}
+    {r.json()['punchline']}
+    ''')
 
 
 # In[ ]:
