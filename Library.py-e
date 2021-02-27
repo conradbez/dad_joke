@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[18]:
+
+
+get_ipython().system('jupyter nbconvert  --to script Library.ipynb')
+get_ipython().system('sed -i -e 1,11d Library.py #delete these lines')
+get_ipython().system('mv Library.py App/Library.py')
+get_ipython().system('cp requirements.txt App/requirements.txt')
+
 
 # In[8]:
 
